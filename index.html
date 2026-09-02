@@ -1,101 +1,211 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>طلب مساعدة إنسانية - إبراهيم</title>
+<!DOCTYPE html> 
+<html lang="ar" dir="rtl"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>طلب مساعدة إنسانية - إبراهيم حجي</title> 
+    <style> 
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); 
+            color: #333; 
+            text-align: center; 
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } 
+        .page { 
+            width: 100%;
+            max-width: 550px; 
+            margin: 20px; 
+            padding: 10px; 
+        } 
+        .card { 
+            background: white; 
+            padding: 40px 30px; 
+            border-radius: 24px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+        } 
+        h1 { 
+            color: #2c3e50; 
+            margin-bottom: 25px; 
+            font-size: 28px;
+        } 
+        p { 
+            font-size: 17px; 
+            line-height: 1.8; 
+            color: #555;
+        } 
+        .heart { 
+            font-size: 50px; 
+            margin-bottom: 10px;
+        } 
+        .thanks { 
+            margin-top: 30px; 
+            font-weight: bold; 
+            color: #2c3e50;
+            font-size: 18px;
+        } 
+        .contact { 
+            margin-top: 30px; 
+            padding: 20px; 
+            background: #f8fafc; 
+            border-radius: 16px; 
+            border: 1px solid #edf2f7;
+            text-align: right;
+        } 
+        .contact strong {
+            display: block;
+            margin-bottom: 15px;
+            color: #2d3748;
+            font-size: 16px;
+            text-align: center;
+        }
+        .info-label {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 5px;
+            display: block;
+            font-weight: 600;
+        }
+        .bank-badge {
+            background: #ebf8ff;
+            color: #2b6cb0;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .name-badge {
+            background: #f0fff4;
+            color: #22543d;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .number-box {
+            background: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .phone-style {
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .iban-style {
+            font-family: monospace, sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            direction: ltr;
+        }
+        .copy-btn {
+            background: #4a5568;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: inherit;
+            white-space: nowrap;
+            margin-right: 10px;
+            transition: background 0.2s;
+        }
+        .copy-btn:hover {
+            background: #2d3748;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .btn-call {
+            background: #007AFF;
+            color: white;
+        }
+    </style> 
+</head> 
+<body> 
+    <div class="page"> 
+        <div class="card"> 
+            <div class="heart">🤍</div> 
+            <h1>طلب مساعدة إنسانية</h1> 
+            <p>أنا إبراهيم، أعيش في قطاع غزة وأمرّ بظروف معيشية صعبة، ولا أملك حاليًا فرصة عمل أو مصدر دخل ثابت.</p> 
+            <p>أصبحت تلبية الاحتياجات الأساسية أمرًا شاقًا، لذلك أتوجه إلى أصحاب القلوب الرحيمة بطلب المساعدة.</p> 
+            <p>لا أطلب مبلغًا كبيرًا؛ فأي مساعدة، مهما كانت بسيطة، يمكن أن تكون عونًا حقيقيًا وتساعدني على تجاوز هذه الظروف.</p> 
+            <p>وإن لم تستطع التبرع، فإن مشاركة هذا الطلب مع الآخرين قد تساعدني أيضًا.</p> 
+            <p class="thanks">جزاكم الله خيرًا، وشكرًا لكل من يمد يد العون 🤍</p> 
+            
+            <div class="contact"> 
+                <strong>بيانات المساعدة أو الاستفسار:</strong> 
+                
+                <span class="info-label">رقم الهاتف / محفظة بال باي (PalPay):</span>
+                <div class="number-box">
+                    <span id="phone-number" class="phone-style">0597070057</span>
+                    <button class="copy-btn" onclick="copyText('phone-number', this)">نسخ الرقم</button>
+                </div>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f3f4f6;
-      color: #333;
-      text-align: center;
-    }
+                <span class="info-label">رقم الآيبان البنكي (IBAN) <span class="bank-badge">بنك فلسطين</span> <span class="name-badge">باسم: إبراهيم حجي</span>:</span>
+                <div class="number-box">
+                    <span id="iban-number" class="iban-style">PS68PALS045115092390993000000</span>
+                    <button class="copy-btn" onclick="copyText('iban-number', this)">نسخ الآيبان</button>
+                </div>
 
-    .page {
-      max-width: 650px;
-      margin: 50px auto;
-      padding: 20px;
-    }
+                <div class="action-buttons">
+                    <a href="https://wa.me" target="_blank" class="btn btn-whatsapp">تواصل عبر واتساب</a>
+                    <a href="tel:0597070057" class="btn btn-call">اتصال مباشر</a>
+                </div>
+            </div> 
+        </div> 
+    </div> 
 
-    .card {
-      background: white;
-      padding: 35px 25px;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.10);
-    }
-
-    h1 {
-      color: #333;
-      margin-bottom: 25px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 2;
-    }
-
-    .heart {
-      font-size: 45px;
-    }
-
-    .thanks {
-      margin-top: 25px;
-      font-weight: bold;
-    }
-
-    .contact {
-      margin-top: 25px;
-      padding: 15px;
-      background: #f7f7f7;
-      border-radius: 12px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="page">
-    <div class="card">
-
-      <div class="heart">🤍</div>
-
-      <h1>طلب مساعدة إنسانية</h1>
-
-      <p>
-        أنا إبراهيم، أعيش في قطاع غزة وأمرّ بظروف معيشية صعبة،
-        ولا أملك حاليًا فرصة عمل أو مصدر دخل ثابت.
-      </p>
-
-      <p>
-        أصبحت تلبية الاحتياجات الأساسية أمرًا شاقًا،
-        لذلك أتوجه إلى أصحاب القلوب الرحيمة بطلب المساعدة.
-      </p>
-
-      <p>
-        لا أطلب مبلغًا كبيرًا؛ فأي مساعدة، مهما كانت بسيطة،
-        يمكن أن تكون عونًا حقيقيًا وتساعدني على تجاوز هذه الظروف.
-      </p>
-
-      <p>
-        وإن لم تستطع التبرع، فإن مشاركة هذا الطلب مع الآخرين
-        قد تساعدني أيضًا.
-      </p>
-
-      <p class="thanks">
-        جزاكم الله خيرًا، وشكرًا لكل من يمد يد العون 🤍
-      </p>
-
-      <div class="contact">
-        <strong>للمساعدة أو الاستفسار</strong>
-        <p>على محفظه بال باي على هذا الرقم0597070057والتحول على حساب البنكي على نفس الرقم 
-        التحويل.</p>
-      </div>
-
-    </div>
-  </div
-
-</body>
+    <script>
+        function copyText(elementId, button) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                button.innerText = 'تم النسخ! ✓';
+                button.style.background = '#38a169';
+                setTimeout(() => {
+                    button.innerText = elementId === 'phone-number' ? 'نسخ الرقم' : 'نسخ الآيبان';
+                    button.style.background = '#4a5568';
+                }, 2000);
+            }).catch(err => {
+                alert('عذراً، لم نتمكن من نسخ النص تلقائياً.');
+            });
+        }
+    </script>
+</body> 
 </html>
